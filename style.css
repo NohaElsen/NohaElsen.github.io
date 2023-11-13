@@ -1,0 +1,257 @@
+@font-face {
+    font-family: "Roboto Bold";
+    src: url("assets/fonts/Roboto-Bold.ttf")
+}
+@font-face {
+    font-family: "Roboto Regular";
+    src: url("assets/fonts/Roboto-Regular.ttf")
+}
+
+
+body{
+    background-color: hsl(235, 18%, 26%);
+}
+
+
+/* Main index CSS */
+.main-container{
+    min-height: 100%;
+    min-height: 100vh; 
+}
+.main{
+    width: 892px;
+    height: 600px;
+    background-color: white;
+    border-radius: 24px;
+}
+.img-container{
+    width: 40%;
+    margin-right: 24px;
+}
+.words-container{
+    width: 50%;
+    padding-left: 50px;
+    margin-right: 34px;
+}
+.main img{
+    height: 93%;
+}
+.words{
+    padding: 0;
+    width: 100%;
+}
+.words h1{
+    font-family: Roboto Bold;
+    font-size: 56px;
+    color: hsl(234, 29%, 20%);
+}
+.words p{
+    font-size: 16px;
+    font-family: Roboto Regular;
+}
+.words ul{
+    margin-bottom: 32px;
+}
+.words li{
+    border: none;
+    font-size: 16px;
+    font-family: Roboto Regular;
+    list-style: none;
+    background-image: url(assets/images/icon-list.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 18px;
+    padding: 0 0 0 32px;
+    line-height: 32px;
+}
+.address{
+    font-size: 12px !important;
+    font-family: Roboto Bold !important;
+}
+.invalid{
+    font-size: 12px !important;
+    font-family: Roboto Bold !important;
+    color: hsl(4, 100%, 67%);
+    visibility: hidden;
+}
+.words input{
+    width: 100%;
+    height: 46px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid hsl(225, 4%, 79%);
+    font-size: 16px;
+    font-family: Roboto Regular;
+    padding: 0 15px 0 15px;
+    color: hsl(234, 29%, 20%);
+    margin-bottom: 24px;
+}
+.words input:focus:invalid{
+    border-color: hsl(4, 100%, 67%);
+    background-color: hsla(4, 100%, 67%, 0.153);
+    color: hsl(4, 100%, 67%);
+}
+.words input::placeholder{
+    color: hsl(225, 4%, 79%);
+}
+.words input:focus{
+    border: 1px solid hsl(234, 29%, 20%);
+}
+button{
+    width: 100%;
+    height: 50px;
+    border-style: hidden;
+    border-radius: 8px !important;
+    background-color: hsl(234, 29%, 20%) !important;
+    font-family: Roboto Regular !important;
+    font-size: 14px;
+    color: white;
+}
+button:hover{
+    background-image: linear-gradient(90deg, hsl(346, 100%, 67%),hsl(4, 100%, 67%));
+    box-shadow: 2px 5px 15px 2px rgb(255, 98, 87, 0.4);
+    border: none;
+}
+
+
+/* Success page CSS */
+.main-sc{
+    background-color: white;
+    border-radius: 24px;
+    height: 500px;
+    width: 480px;
+}
+.image-sc{
+    height: fit-content;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+.words-sc{
+    margin-top: -10px;
+}
+.words-sc h1{
+    margin-bottom: 20px;
+}
+.dismiss{
+    margin-bottom: 32px;
+}
+.dismiss button{
+    width: 84%;
+}
+
+
+
+@media only screen and (max-width: 864px){
+
+    /* Main index CSS */
+    .img-container{
+        margin-right: 40px;
+        width: 30%;
+    }
+    .words{
+        margin-right: 30px;
+    }
+    .words-container{
+        padding-left: 0;
+    }
+
+    /* Success page CSS */
+    .words-sc .words{
+        margin: 0;
+    }
+}
+
+
+@media only screen and (max-width: 794px) and (min-width: 575px){
+
+    /* Main index CSS */
+    .words-container{
+        width: 100%;
+        height: 100%;
+        margin-right: 0;
+        padding-right: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .words{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .img-container{
+        visibility: hidden;
+    }
+
+    /* Success page CSS */
+    .words-sc .words{
+        margin: 0;
+    }
+}
+
+
+@media only screen and (max-width: 575px){
+
+    body{
+        background-color: white;
+    }
+
+    /* Main index CSS */
+    .main-container{
+        align-items: start !important;
+    }
+    .main{
+        height: 100%;
+        border-radius: 0;
+    }
+    .img-container{
+        order: -1;
+        width: 100%;
+        margin: 0 !important;
+        padding: 0;
+        height: fit-content;
+    }
+    .main img{
+        content: url(assets/images/illustration-sign-up-mobile.svg);
+        width: 100%;
+    }
+    .words-container{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .words{
+        width: 100%;
+        margin: 24px;
+    }
+    .words h1{
+        font-size: 42px;
+    }
+    .words li{
+        background-position: left top;
+        margin-bottom: 14px;
+        line-height: 24px;
+    }
+    button{
+        height: 58px;
+    }
+
+    /* Success page CSS */
+    .words-sc .words{
+        margin: 0;
+    }
+    .image-sc{
+        margin-left: 0;
+        margin-top: 154px;
+    }
+    .words-sc{
+        margin-left: 20px !important;
+        margin-top: 42px;
+    }
+    .dismiss{
+        margin-top: 260px;
+    }
+    .dismiss button{
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+}
